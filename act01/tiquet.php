@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 * Aquest fitxer té 6 errors. Alguns aturen la pàgina, altres no.
 * Abans de començar, assegura't que veus els errors: si la pàgina
 * surt en blanc, revisa la configuració de l’Exercici 1.
@@ -27,14 +27,14 @@ $total = $subtotal + $importIva;
    <title>Tiquet</title>
 </head>
 <body>
-   <h1><? echo $botiga; ?></h1>
+   <h1><?php echo $botiga; ?></h1> <!-- Error 5 substituir per php-->
 
    <p>Producte: <?= $producte ?></p>
    <p>Unitats: <?= $unitats ?></p>
 
    <?php
-   echo '<p>Preu unitari: ' + $preu + ' EUR</p>';
-   echo '<p>Subtotal: $subtotal EUR</p>';
+   echo '<p>Preu unitari: ' . $preu . ' EUR</p>'; //Error 4: echo '<p>Preu unitari: ' + $preu + ' EUR</p>'; Posar . y no +
+   echo "<p>Subtotal: $subtotal EUR</p>"; // Error 6: echo "<p>Subtotal: $subtotal EUR</p>"; substituir ' por "
    ?>
 
    <p>IVA: <?= $importIva ?> EUR</p>
