@@ -67,12 +67,39 @@ echo "Ejemplo de str_replace: " . str_replace($antiga, $nova, $cadena) . "<br>";
 
 // explode: permet dividir una cadena segons un caracter o patro
 
-// Exercici 1: busca en php.net la funcio: str_wor_count() y pon un ejemplo
+// Exercici 1: busca en php.net la funcio: str_word_count() y pon un ejemplo
+
+// str_word_count — Cuenta el número de palabras utilizadas en un string
+echo "<h3>Ejercicio 1: str_word_count()</h3>";
+$frase = "Hola mundo, esto es PHP";
+echo "Numero de palabras: " . str_word_count($frase);
+
+echo "Formato 1 (array de palabras): ";
+echo(str_word_count($frase,1));
+echo "<br>";
+
+echo "Formato 2 (posicion => palabras): ";
+echo(str_word_count($frase,2));
+echo "<br>";
 
 // Exercici 2: busca en php.net la funcio
 // levenshtein() y pon un ejemplo
 
+// levenshtein — Calcula la distancia Levenshtein entre dos strings
+$string1 = "Hola";
+$string2 = "Holaalon";
+$lev = levenshtein($string1, $string2);
+echo $lev;
+
 // Exercici 3: busca que es el operador ternario y pon un ejemplo
+
+// El operador ternario (? :) es un operador condicional que funciona 
+// como una versión simplificada de la estructura if-else
+
+$edad = 18;
+$resultado = $edad >= 18 ? "Es mayor de edad" : "Es menor de edad";
+
+echo $resultado;
 
 // Exercici 4: Explicar que hace esta funcion
 // function funcionMultipleReturns($v1, $v2, $v3){
@@ -82,6 +109,12 @@ echo "Ejemplo de str_replace: " . str_replace($antiga, $nova, $cadena) . "<br>";
 //     return array($v1, $v2, $v3);
 //}
 
+// Sirve para devolver múltiples valores a la vez empaquetándolos dentro de un array
+
+$resultado = funcionMultipleReturns('a', 'b', 'c');
+
+echo $resultado[0];
+
 // Exercici 5: Crea una funcion comprova_email(...)
 // que reciba una cadena de caracteres como parametro
 // que contiene un email y hace las siguientes comprobaciones:
@@ -89,9 +122,8 @@ echo "Ejemplo de str_replace: " . str_replace($antiga, $nova, $cadena) . "<br>";
 // - convertir a minuscules
 // - eliminar todos los espacios en blanco
 // - comprobar si tienes el caracter @
+// - contar el numero de caracteres
 
-
-
-
+// FALTAAAA!
 
 ?>
