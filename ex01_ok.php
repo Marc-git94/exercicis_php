@@ -1,12 +1,11 @@
 <?php
 
-// Error: Estas variables no estaban declaradas y por eso daba error
+// Variables que faltaban (en el original se usaban sin haberlas declarado)
 $x = 'Hola, bon dia';
 $dades = 'Dades ';
 $base = 2;
-$intern = 4;
 
-echo "Hola, ";
+echo "Hola";
 echo "Hola", " ", "món";
 echo "<p>Text</p>";
 
@@ -26,15 +25,15 @@ echo $nom;
 $x = 5;
 $x = "cinc";
 
-$a = "10" + 5;
-$b = "10" . 5;
+$a = "10" + 5;   // suma numérica -> 15
+$b = "10" . 5;   // concatenación -> "105"
 var_dump($a, $b);
 
 $nom = 'Aina';
-echo 'Hola $nom';
+echo 'Hola $nom';   // comillas simples: NO interpreta la variable, imprime $nom literal
 
 $nom = "Aina";
-echo "Hola $nom";
+echo "Hola $nom";   // comillas dobles: sí interpreta la variable
 
 $nom = "Aina";
 $punts = 8;
@@ -49,16 +48,17 @@ const BOTIGA = 'A la Web';
 echo BOTIGA;
 $total = $base * (1 + IVA);
 
-function saluda() {
-
-//Error: Esta variable estaba declarada fuera de la funcion y la he puesto dentro
 $missatge = "Hola";
 
+function saluda() {
+  // Error corregido: $missatge está fuera de la función, así que aquí no existe.
+  // Solución: declararla dentro (o pasarla como parámetro: function saluda($missatge))
+  $missatge = "Hola";
   echo $missatge;
-  $intern = "Adeu";
+  $intern = "Adeu";   // variable local: solo existe dentro de la función
 }
 
 saluda();
-echo $intern;
+// echo $intern;   // Error a propósito: $intern es local y fuera de la función no existe
 
 ?>
