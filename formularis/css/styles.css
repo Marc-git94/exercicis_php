@@ -1,0 +1,108 @@
+/* Variables de color para cambiar el tema fácilmente */
+:root {
+    --fondo: #f1f3f9;
+    --tarjeta: #ffffff;
+    --texto: #1f2430;
+    --texto-suave: #5b6275;
+    --borde: #d5d9e5;
+    --primario: #6c4cf1;
+    --primario-oscuro: #5236d4;
+    --radio: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--texto);
+    background: linear-gradient(135deg, #e9e4ff 0%, var(--fondo) 60%);
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    background: var(--tarjeta);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(40, 30, 100, 0.12);
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+input,
+select {
+    padding: 0.7rem 0.85rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--texto);
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 3px rgba(108, 76, 241, 0.2);
+}
+
+/* Marca en rojo solo cuando el usuario ya ha escrito algo inválido */
+input:not(:placeholder-shown):invalid {
+    border-color: #e5484d;
+}
+
+button {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #fff;
+    background: var(--primario);
+    border: none;
+    border-radius: var(--radio);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: var(--primario-oscuro);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+    .tarjeta {
+        padding: 1.5rem;
+    }
+}

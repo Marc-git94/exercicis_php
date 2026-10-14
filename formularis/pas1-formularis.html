@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="tarjeta">
+        <h1>Inscripció al festival</h1>
+
+        <!-- action: on van les dades -->
+        <!-- method: com hi van (GET o POST) -->
+        <form action="pas1-resultat.php" method="post">
+            <div class="campo">
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" required>
+            </div>
+
+            <div class="campo">
+                <label for="correu">Correu</label>
+                <input id="correu" name="correu" type="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="dia">Dia</label>
+                <select id="dia" name="dia">
+                    <option value="divendres">Divendres</option>
+                    <option value="dissabte">Dissabte</option>
+                </select>
+            </div>
+
+            <button type="submit">Inscriu-me</button>
+        </form>
+    </main>
+</body>
+</html>
