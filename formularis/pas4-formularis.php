@@ -1,6 +1,6 @@
 <?php
 /**
- * PAS 4 - Validar, control d'errors i escapar
+ * PAS 4 - Validar, control d'errors i escapar.
  * 
  */
 
