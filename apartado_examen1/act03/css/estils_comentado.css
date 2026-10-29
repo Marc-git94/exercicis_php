@@ -1,0 +1,251 @@
+/* Selecciona todos los elementos HTML de la página */
+* {
+    /* Hace que el padding y el borde se incluyan dentro del ancho y alto del elemento */
+    box-sizing: border-box;
+}
+
+/* Aplica estilos generales al cuerpo de la página */
+body {
+    /* Elimina el margen exterior predeterminado del navegador */
+    margin: 0;
+
+    /* Añade espacio interior: 2rem arriba/abajo y 1rem a los lados */
+    padding: 2rem 1rem;
+
+    /* Define el color de fondo de la página */
+    background: #EEF2F3;
+
+    /* Define la tipografía principal y las alternativas */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Define el color general del texto */
+    color: #1F2D33;
+}
+
+/* Estiliza el contenedor principal de la página */
+main {
+    /* Establece un ancho máximo de 560 píxeles */
+    max-width: 560px;
+
+    /* Centra el contenedor horizontalmente */
+    margin: 0 auto;
+
+    /* Añade 2rem de espacio interior en todos los lados */
+    padding: 2rem;
+
+    /* Define el fondo blanco del contenedor */
+    background: #FFFFFF;
+
+    /* Redondea las esquinas con un radio de 10 píxeles */
+    border-radius: 10px;
+
+    /* Añade una sombra suave alrededor del contenedor */
+    /* 0 = desplazamiento horizontal; 2px = vertical; 10px = desenfoque */
+    /* rgba define el color negro con una transparencia del 10% */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+}
+
+/* Estiliza los títulos principales h1 */
+h1 {
+    /* Elimina todos los márgenes del título */
+    margin: 0;
+
+    /* Define el color del texto del título */
+    color: #0F6E75;
+}
+
+/* Estiliza los títulos secundarios h2 */
+h2 {
+    /* Aplica el mismo color verde azulado que el título principal */
+    color: #0F6E75;
+}
+
+/* Estiliza los elementos que tienen class="subtitol" */
+.subtitol {
+    /* 0.25rem arriba, 0 a los lados y 1.5rem abajo */
+    margin: .25rem 0 1.5rem;
+
+    /* Define el color del subtítulo */
+    color: #5B6B72;
+}
+
+/* Estiliza los grupos de campos del formulario */
+fieldset {
+    /* Sin margen arriba, 1.5rem abajo y sin margen lateral */
+    margin: 0 0 1.5rem;
+
+    /* Añade espacio interior: 1rem arriba y 1.25rem a los lados y abajo */
+    padding: 1rem 1.25rem 1.25rem;
+
+    /* Define un borde de 1px, sólido y de color gris azulado */
+    border: 1px solid #C9D6D9;
+
+    /* Redondea las esquinas del grupo */
+    border-radius: 8px;
+}
+
+/* Estiliza los títulos de los grupos fieldset */
+legend {
+    /* Añade 0 arriba/abajo y 0.5rem a los lados */
+    padding: 0 .5rem;
+
+    /* Muestra el texto en negrita */
+    font-weight: bold;
+
+    /* Define el color del título del grupo */
+    color: #0F6E75;
+}
+
+/* Estiliza todas las etiquetas label */
+label {
+    /* Hace que cada etiqueta ocupe una línea completa */
+    display: block;
+
+    /* Añade 0.9rem de margen arriba */
+    margin-top: .9rem;
+
+    /* Añade 0.3rem de margen abajo */
+    margin-bottom: .3rem;
+
+    /* Muestra las etiquetas en negrita */
+    font-weight: bold;
+
+    /* Define el tamaño del texto como 0.9 veces el tamaño base */
+    font-size: .9rem;
+}
+
+/* Estiliza únicamente los label que tienen class="linia" */
+label.linia {
+    /* 0.4rem arriba/abajo y 0 a los lados */
+    margin: .4rem 0;
+
+    /* Quita la negrita para que el texto tenga un peso normal */
+    font-weight: normal;
+}
+
+/* Estiliza los elementos que tienen class="grup" */
+.grup {
+    /* 1rem arriba, 0 a los lados y 0.2rem abajo */
+    margin: 1rem 0 .2rem;
+
+    /* Muestra el texto en negrita */
+    font-weight: bold;
+
+    /* Reduce ligeramente el tamaño del texto */
+    font-size: .9rem;
+}
+
+/* Selecciona los campos de texto, correo, contraseña, fecha, teléfono y los select */
+input[type="text"], input[type="email"], input[type="password"],
+input[type="date"], input[type="tel"], select {
+    /* Hace que el campo ocupe el 100% del ancho disponible */
+    width: 100%;
+
+    /* Añade 0.5rem de espacio interior en todos los lados */
+    padding: .5rem;
+
+    /* Añade un borde fino de color gris azulado */
+    border: 1px solid #B5C4C8;
+
+    /* Redondea las esquinas del campo */
+    border-radius: 5px;
+
+    /* Establece el tamaño del texto dentro del campo */
+    font-size: 1rem;
+}
+
+/* Estiliza el botón de envío del formulario */
+button {
+    /* Hace que el botón ocupe todo el ancho disponible */
+    width: 100%;
+
+    /* Añade 0.8rem de espacio interior */
+    padding: .8rem;
+
+    /* Elimina el borde predeterminado del botón */
+    border: none;
+
+    /* Redondea las esquinas del botón */
+    border-radius: 6px;
+
+    /* Define el color de fondo del botón */
+    background: #0F6E75;
+
+    /* Define el color blanco del texto */
+    color: #FFFFFF;
+
+    /* Establece el tamaño del texto del botón */
+    font-size: 1.05rem;
+
+    /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    cursor: pointer;
+
+    /* Anima los cambios de color de fondo durante 0.2 segundos */
+    transition: background .2s;
+}
+
+/* Aplica estos estilos cuando el cursor pasa por encima del botón */
+button:hover {
+    /* Oscurece el fondo del botón al pasar el cursor */
+    background: #0A4F54;
+}
+
+/* Estiliza las listas ul, como la lista de errores de PHP */
+ul {
+    /* Añade espacio a la izquierda para separar los marcadores del borde */
+    padding-left: 1.2rem;
+
+    /* Muestra los mensajes de la lista en rojo oscuro */
+    color: #A32020;
+}
+
+/* Estiliza las tablas */
+table {
+    /* Hace que la tabla ocupe todo el ancho disponible */
+    width: 100%;
+
+    /* Añade 1rem de margen por encima de la tabla */
+    margin-top: 1rem;
+
+    /* Une los bordes de las celdas para evitar bordes dobles */
+    border-collapse: collapse;
+}
+
+/* Estiliza las celdas de encabezado th y las celdas normales td */
+th, td {
+    /* Añade espacio interior: 0.6rem arriba/abajo y 0.8rem a los lados */
+    padding: .6rem .8rem;
+
+    /* Alinea el texto a la izquierda */
+    text-align: left;
+
+    /* Añade una línea inferior a cada celda */
+    border-bottom: 1px solid #DCE5E7;
+}
+
+/* Estiliza las celdas de encabezado de la tabla */
+th {
+    /* Reserva el 40% del ancho de la tabla para la columna del encabezado */
+    width: 40%;
+
+    /* Define el fondo verde azulado */
+    background: #0F6E75;
+
+    /* Define el texto en blanco */
+    color: #FFFFFF;
+
+    /* Convierte la primera letra de cada palabra en mayúscula */
+    text-transform: capitalize;
+}
+
+/* Selecciona las celdas td de las filas pares de la tabla */
+tr:nth-child(even) td {
+    /* Aplica un fondo gris muy claro para alternar los colores de las filas */
+    background: #F4F7F7;
+}
+
+/* Estiliza todos los enlaces a */
+a {
+    /* Define el color de los enlaces */
+    color: #0F6E75;
+}

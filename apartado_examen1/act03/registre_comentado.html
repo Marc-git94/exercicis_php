@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- Indica que el document utilitza HTML5 -->
+
+<html lang="ca">
+<!-- Inicia el document HTML i indica que l'idioma és el català -->
+
+<head>
+    <!-- Conté informació sobre la pàgina que no es mostra directament al contingut -->
+
+    <meta charset="UTF-8">
+    <!-- Permet mostrar correctament accents, la ç i altres caràcters especials -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fa que la pàgina s'adapti a l'amplada de la pantalla del dispositiu -->
+
+    <title>BitBazar - Registre</title>
+    <!-- Defineix el títol que apareix a la pestanya del navegador -->
+
+    <link rel="stylesheet" href="css/estils_comentado.css">
+    <!-- Connecta el document HTML amb el fitxer CSS que defineix els estils -->
+
+</head>
+
+<body>
+    <!-- Conté tot el contingut visible de la pàgina -->
+
+    <main>
+        <!-- Identifica el contingut principal de la pàgina -->
+
+        <h1>BitBazar</h1>
+        <!-- Mostra el títol principal de la pàgina -->
+
+        <p class="subtitol">Crea el teu compte</p>
+        <!-- Mostra un paràgraf amb la classe subtitol per aplicar-li estils CSS -->
+
+        <form action="processa_comentado.php" method="post">
+            <!-- Crea un formulari.
+                 action indica el fitxer que rebrà les dades.
+                 method="post" envia les dades mitjançant una petició POST. -->
+
+            <fieldset>
+                <!-- Agrupa camps del formulari relacionats -->
+
+                <legend>Dades personals</legend>
+                <!-- Defineix el títol del grup de camps -->
+
+                <label for="nom">Nom</label>
+                <!-- Etiqueta del camp del nom.
+                     for="nom" la relaciona amb l'input que té id="nom" -->
+
+                <input type="text" id="nom" name="nom">
+                <!-- Permet introduir text.
+                     id identifica el camp dins de l'HTML.
+                     name és el nom amb què s'envia el valor a PHP. -->
+
+                <label for="cognoms">Cognoms</label>
+                <!-- Etiqueta del camp dels cognoms -->
+
+                <input type="text" id="cognoms" name="cognoms">
+                <!-- Permet introduir els cognoms -->
+
+                <label for="naixement">Data de naixement</label>
+                <!-- Etiqueta de la data de naixement -->
+
+                <input type="date" id="naixement" name="naixement">
+                <!-- Mostra un camp per seleccionar una data -->
+
+                <label for="telefon">Telèfon</label>
+                <!-- Etiqueta del número de telèfon -->
+
+                <input type="tel" id="telefon" name="telefon">
+                <!-- Permet introduir un número de telèfon.
+                     No comprova automàticament que sigui un telèfon vàlid. -->
+
+            </fieldset>
+
+            <fieldset>
+                <!-- Agrupa els camps relacionats amb el compte -->
+
+                <legend>Dades del compte</legend>
+                <!-- Títol del grup de camps -->
+
+                <label for="correu">Correu electrònic</label>
+                <!-- Etiqueta del correu electrònic -->
+
+                <input type="email" id="correu" name="correu">
+                <!-- Permet introduir un correu i comprova el seu format bàsic -->
+
+                <label for="usuari">Nom d'usuari</label>
+                <!-- Etiqueta del nom d'usuari -->
+
+                <input type="text" id="usuari" name="usuari">
+                <!-- Permet escriure el nom d'usuari -->
+
+                <label for="clau">Contrasenya</label>
+                <!-- Etiqueta de la contrasenya -->
+
+                <input type="password" id="clau" name="clau">
+                <!-- Permet escriure una contrasenya sense mostrar-ne els caràcters -->
+
+                <label for="clau2">Repeteix la contrasenya</label>
+                <!-- Etiqueta del camp per repetir la contrasenya -->
+
+                <input type="password" id="clau2" name="clau2">
+                <!-- Permet tornar a escriure la contrasenya.
+                     La comprovació que les dues coincideixen s'ha de programar. -->
+
+            </fieldset>
+
+            <fieldset>
+                <!-- Agrupa els camps relacionats amb l'adreça -->
+
+                <legend>Adreça</legend>
+                <!-- Títol del grup de camps -->
+
+                <label for="carrer">Carrer i número</label>
+                <!-- Etiqueta de l'adreça -->
+
+                <input type="text" id="carrer" name="carrer">
+                <!-- Permet introduir el carrer i el número -->
+
+                <label for="poblacio">Població</label>
+                <!-- Etiqueta de la població -->
+
+                <input type="text" id="poblacio" name="poblacio">
+                <!-- Permet introduir el nom de la població -->
+
+                <label for="cp">Codi postal</label>
+                <!-- Etiqueta del codi postal -->
+
+                <input type="text" id="cp" name="cp">
+                <!-- Permet introduir el codi postal com a text.
+                     Això permet conservar zeros inicials. -->
+
+            </fieldset>
+
+            <fieldset>
+                <!-- Agrupa els camps relacionats amb les preferències -->
+
+                <legend>Preferències</legend>
+                <!-- Títol del grup de camps -->
+
+                <label for="tipus">Tipus de client</label>
+                <!-- Etiqueta del menú desplegable -->
+
+                <select id="tipus" name="tipus">
+                    <!-- Crea un menú desplegable per seleccionar una opció -->
+
+                    <option value="">Tria una opció</option>
+                    <!-- Opció inicial sense un valor seleccionat útil -->
+
+                    <option value="particular">Particular</option>
+                    <!-- Si se selecciona, s'envia el valor particular -->
+
+                    <option value="empresa">Empresa</option>
+                    <!-- Si se selecciona, s'envia el valor empresa -->
+
+                    <option value="estudiant">Estudiant</option>
+                    <!-- Si se selecciona, s'envia el valor estudiant -->
+
+                </select>
+
+                <p class="grup">Com ens has conegut?</p>
+                <!-- Mostra una pregunta amb la classe grup per donar-li estil -->
+
+                <label class="linia">
+                    <!-- Agrupa l'opció i el seu text dins d'una etiqueta -->
+
+                    <input type="radio" name="origen" value="xarxes">
+                    <!-- Crea una opció de selecció única.
+                         Les opcions amb el mateix name formen un grup.
+                         Si se selecciona, envia el valor xarxes. -->
+
+                    Xarxes socials
+                    <!-- Text visible de l'opció -->
+
+                </label>
+
+                <label class="linia">
+                    <input type="radio" name="origen" value="amics">
+                    <!-- Segona opció del mateix grup; envia amics si se selecciona -->
+
+                    Un amic o amiga
+                    <!-- Text visible de l'opció -->
+
+                </label>
+
+                <label class="linia">
+                    <input type="radio" name="origen" value="cercador">
+                    <!-- Tercera opció del mateix grup; envia cercador si se selecciona -->
+
+                    Cercador d'internet
+                    <!-- Text visible de l'opció -->
+
+                </label>
+
+                <label class="linia">
+                    <input type="checkbox" name="butlleti" value="si">
+                    <!-- Crea una casella que es pot marcar o desmarcar.
+                         Si està marcada, envia el valor si amb el nom butlleti. -->
+
+                    Vull rebre ofertes
+                    <!-- Text de la casella -->
+
+                </label>
+
+                <label class="linia">
+                    <input type="checkbox" name="condicions" value="si">
+                    <!-- Casella per acceptar les condicions.
+                         No és obligatori marcar-la amb el codi actual. -->
+
+                    Accepto les condicions
+                    <!-- Text de la casella -->
+
+                </label>
+
+            </fieldset>
+
+            <button type="submit">Crear el compte</button>
+            <!-- Envia el formulari a processa.php -->
+
+        </form>
+        <!-- Tanca el formulari -->
+
+    </main>
+    <!-- Tanca el contingut principal -->
+
+</body>
+<!-- Tanca el cos de la pàgina -->
+
+</html>
+<!-- Tanca el document HTML -->

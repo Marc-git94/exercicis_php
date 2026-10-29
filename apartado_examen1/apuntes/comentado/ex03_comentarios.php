@@ -42,7 +42,7 @@ $nom = "Pepito";
     <!-- Forma 2: la etiqueta HTML está fuera de PHP y PHP solo muestra el valor. -->
     <p>Hola <?= $nom ?></p>
     <!-- <p> y </p> son HTML y crean un párrafo. -->
-    <!-- <?= $nom ?> es una forma abreviada de escribir <?php echo $nom; ?>. -->
+    <!-- <-?= $nom ?> es una forma abreviada de escribir <-?php echo $nom; ?>. -->
     <!-- El resultado visible es: Hola Pepito. -->
 
     <!-- Forma 3: escribimos directamente el texto en HTML, sin utilizar PHP. -->

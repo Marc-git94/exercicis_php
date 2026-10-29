@@ -29,11 +29,11 @@ $direccio = 'Carrer 1'; // Guarda la dirección.
 
 <!-- Muestra un encabezado HTML de nivel 2 con el nombre del producto. -->
 <h2><?php echo $producte; ?></h2>
-<!-- <?php echo $producte; ?> ejecuta PHP y muestra el valor de $producte. -->
+<!-- <-?php echo $producte; ?> ejecuta PHP y muestra el valor de $producte. -->
 
 <!-- Muestra el precio final con IVA y la moneda EUR. -->
 <p>Preu amb IVA: <?= $total ?> EUR</p>
-<!-- <?= $total ?> es una forma abreviada de escribir <?php echo $total; ?>. -->
+<!-- <-?= $total ?> es una forma abreviada de escribir <-?php echo $total; ?>. -->
 
 <!-- Muestra las unidades disponibles del producto. -->
 <p>Disponibilitat: <?= $estoc ?></p>
@@ -44,12 +44,12 @@ $direccio = 'Carrer 1'; // Guarda la dirección.
 
 <!-- Muestra el nombre de la persona. -->
 <p>Nom complet: <?= $nom ?></p>
-<!-- <?= $nom ?> muestra Marc. -->
+<!-- <-?= $nom ?> muestra Marc. -->
 
 <!-- Muestra el apellido de la persona. -->
 <p>Cognom: <?= $cognom ?></p>
-<!-- <?= $cognom ?> muestra Garcia. -->
+<!-- <-?= $cognom ?> muestra Garcia. -->
 
 <!-- Muestra la dirección de la persona. -->
 <p>Direccio: <?= $direccio ?></p>
-<!-- <?= $direccio ?> muestra Carrer 1. -->
+<!-- <-?= $direccio ?> muestra Carrer 1. -->
