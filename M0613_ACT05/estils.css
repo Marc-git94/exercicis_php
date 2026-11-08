@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Estilos Generales para las páginas de ejercicios (BitBazar)
+   ========================================================================== */
+
+/* Configuración de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fcfcfc;
+}
+
+/* Títulos */
+h1 {
+    color: #1a252f;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Separadores */
+hr {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px dashed #bdc3c7;
+}
+
+/* Bloques de Resumen y Mensajes Informativos */
+.resum-caixa {
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.missatge-buit {
+    color: #7f8c8d;
+    font-style: italic;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   Estructura de la Graella y las Tarjetas (Apartado 7 y Reto)
+   ========================================================================== */
+
+/* Contenedor de tarjetas (Grid / Flexbox) */
+.graella {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta individual de producto */
+.targeta {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 240px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto visual al pasar el ratón por encima de la tarjeta */
+.targeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Textos resaltados dentro de las tarjetas */
+.targeta p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Estados de Stock (Colores semánticos)
+   ========================================================================== */
+.estoc-disponible {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.estoc-ultimes {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.estoc-esgotat {
+    color: #c0392b;
+    font-weight: bold;
+}
