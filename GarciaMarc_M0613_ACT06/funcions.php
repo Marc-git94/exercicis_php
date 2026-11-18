@@ -21,17 +21,20 @@ function camp(string $camp, string $defecte = ''): string
 function etiqueta(string $clau): string
 {
     $noms = [
-        'nom'       => 'Nom',
-        'cognoms'   => 'Cognoms',
-        'usuari'    => 'Nom d\'usuari',
-        'clau'      => 'Contrasenya',
-        'correu'    => 'Correu electrònic',
-        'naixement' => 'Data de naixement',
-        'cp'        => 'Codi postal',
-        'adreca'    => 'Adreça',
-        'origen'    => 'Origen',
-        'newsletter'=> 'Butlletí',
-        'condicions'=> 'Condicions',
+        'nom'        => 'Nom',
+        'cognoms'    => 'Cognoms',
+        'naixement'  => 'Data de naixement',
+        'telefon'    => 'Telèfon',
+        'correu'     => 'Correu electrònic',
+        'usuari'     => 'Nom d\'usuari',
+        'carrer'     => 'Carrer i número',
+        'poblacio'   => 'Població',
+        'cp'         => 'Codi postal',
+        'tipus'      => 'Tipus de client',
+        'origen'     => 'Com ens has conegut',
+        'butlleti'   => 'Ofertes',
+        'condicions' => 'Condicions',
     ];
     return $noms[$clau] ?? ucfirst($clau);
 }
+?>

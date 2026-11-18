@@ -6,7 +6,8 @@ if (!isset($titolPagina)) {
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= htmlspecialchars($titolPagina) ?> · <?= BOTIGA_NOM ?></title>
     <link rel="stylesheet" href="<?= FULL_ESTILS ?>">
 </head>

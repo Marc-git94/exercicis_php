@@ -11,3 +11,4 @@ require 'header.php';
 <a class="tornar" href="<?= PAG_FORMULARI ?>">Registrar un altre compte</a>
 <?php
 require 'footer.php';
+?>

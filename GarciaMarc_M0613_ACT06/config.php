@@ -1,8 +1,8 @@
 <?php
 
-const BOTIGA_NOM    = 'BotigaMolona';
+const BOTIGA_NOM    = 'BitBazar';
 const BOTIGA_LEMA   = 'La teva botiga molona';
-const BOTIGA_CORREU = 'info@botigamolona.cat';
+const BOTIGA_CORREU = 'info@bitbazar.cat';
 
 const MIN_USUARI = 4;
 const MIN_CLAU   = 6;
